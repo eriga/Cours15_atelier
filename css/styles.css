@@ -1,0 +1,13 @@
+/* Couleurs */
+:root {
+  --bleu: #0078d4;
+  --bleu-pale: #51a2e0;
+  --bleu-fonce: #00365f;
+  --bg: #222;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+}/*# sourceMappingURL=styles.css.map */
