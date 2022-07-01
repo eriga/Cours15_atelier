@@ -15,9 +15,21 @@ body {
 
 .conteneur {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.conteneur a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 10px 12px;
+}
+.conteneur a:hover {
+  background-color: #111;
 }
 .conteneur header {
   display: flex;
+  justify-content: space-between;
   background-color: var(--bleu);
 }
 .conteneur header .gauche {
@@ -43,15 +55,83 @@ body {
   background-color: var(--bleu-fonce);
   color: white;
   border: none;
-  padding: 4px 20px 4px 40px;
+  padding: 7px 20px 7px 35px;
   border-radius: var(--border-radius);
   width: 300px;
+}
+.conteneur header .gauche input::-moz-placeholder {
+  color: white;
+}
+.conteneur header .gauche input:-ms-input-placeholder {
+  color: white;
+}
+.conteneur header .gauche input::placeholder {
+  color: white;
+}
+.conteneur header .droite {
+  display: flex;
+  align-items: center;
+}
+.conteneur header .droite img {
+  width: 25px;
 }
 .conteneur header .bouton {
   height: 50px;
   cursor: pointer;
   padding: 0px 15px;
+  display: flex;
+  align-items: center;
 }
 .conteneur header .bouton:hover {
   background-color: var(--bleu-fonce);
+}
+.conteneur #options {
+  background-color: #333;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  padding: 2px 0px 2px 15px;
+}
+.conteneur #options #nouveau-message {
+  background-color: var(--bleu-pale);
+  color: #111;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+.conteneur #options .liens {
+  margin-left: 10px;
+}
+.conteneur #contenu {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.conteneur #contenu nav {
+  margin-top: 10px;
+  min-width: 150px;
+  overflow-y: auto;
+}
+.conteneur #contenu nav div {
+  padding: 10px 12px;
+}
+.conteneur #contenu .liste {
+  padding: 10px 5px 0px 15px;
+  overflow-y: auto;
+  min-width: 250px;
+}
+.conteneur #contenu .liste .auteur, .conteneur #contenu .liste .titre, .conteneur #contenu .liste .apercu {
+  color: white;
+}
+.conteneur #contenu .liste div {
+  margin-top: 30px;
+}
+.conteneur #message {
+  color: white;
+  padding: 0px 30px;
+  overflow: hidden;
+}
+.conteneur #message .corps {
+  overflow-y: auto;
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

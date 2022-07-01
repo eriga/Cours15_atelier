@@ -16,9 +16,23 @@ body {
 
 .conteneur {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.85rem;
+        padding: 10px 12px;
+
+        &:hover {
+            background-color: #111;
+        }
+    }
 
     header {
         display: flex;
+        justify-content: space-between;
         background-color: var(--bleu);
 
         .gauche {
@@ -47,9 +61,22 @@ body {
                 background-color: var(--bleu-fonce);
                 color: white;
                 border: none;
-                padding: 4px 20px 4px 40px;
+                padding: 7px 20px 7px 35px;
                 border-radius: var(--border-radius);
                 width: 300px;
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+
+        .droite {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 25px;
             }
         }
 
@@ -57,10 +84,77 @@ body {
             height: 50px;
             cursor: pointer;
             padding: 0px 15px;
+            display: flex;
+            align-items: center;
 
             &:hover {
                 background-color: var(--bleu-fonce);
             }
+        }
+    }
+
+    #options {
+        background-color: #333;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        padding: 2px 0px 2px 15px;
+
+        #nouveau-message {
+            background-color: var(--bleu-pale);
+            color: #111;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+
+        }
+
+
+        .liens {
+            margin-left: 10px;
+
+
+        }
+    }
+
+    #contenu {
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+
+        nav {
+            margin-top: 10px; 
+            min-width: 150px;
+            overflow-y: auto;
+
+            div {
+                padding: 10px 12px;
+            }
+        }
+
+        .liste {
+            padding: 10px 5px 0px 15px;
+            overflow-y: auto;
+            min-width: 250px;
+
+            .auteur, .titre, .apercu {
+                color: white;
+            }
+
+            div {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    #message {
+        color: white;
+        padding: 0px 30px;
+        overflow: hidden;
+
+        .corps {
+            overflow-y: auto;
+            height: 100%;
         }
     }
 }
